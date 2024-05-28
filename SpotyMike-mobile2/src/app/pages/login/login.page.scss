@@ -1,0 +1,20 @@
+app-login{
+  width: 100%;
+}
+.bg-transparent {
+  background: transparent;
+}
+form {
+  padding: 0 5%;
+  text-align: center;
+  padding-top: 80%;
+  padding-bottom: 80%;
+
+  ion-list {
+    ion-item {
+      --background: transparent;
+    }
+  }
+}
+
+
