@@ -1,9 +1,14 @@
-
-<form>
-  <ion-label >Email</ion-label>
-  <p>
-  <ion-list class="bg-transparent ">
-      <ion-input  fill="outline"  placeholder="Enter text"></ion-input>
+<form [formGroup]="bioSection" (ngSubmit)="onSubmit()">
+  <ion-list class="bg-transparent">
+    <ion-label>Email</ion-label>
+    <ion-input type="Email" name="email" placeholder="mike@mike.mike"></ion-input>
+    <ion-label>Password</ion-label>
+    <ion-input [type]="showPassword ? 'text' : 'password'" name="Password" placeholder="••••••••••••••">
+      <ion-icon class="input_password" slot="end" [name]="showPassword ? 'eye-outline' : 'eye-off-outline'" slot="end"
+        (click)="togglePasswordVisibility()">
+      </ion-icon></ion-input>
   </ion-list>
+  <a type="submit" (click)="openModalpasswordForgot()" class="password-forgot">Mot de passe oublié</a>
+  <ion-button class="button" type="submit" [disabled]="!bioSection.valid">Se Connecter</ion-button>
+  <a type="submit" (click)="createAcount()">Pas encore inscrit ?</a>
 </form>
-
