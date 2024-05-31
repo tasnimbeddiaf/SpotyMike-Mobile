@@ -21,7 +21,8 @@ export const routes: Routes = [
     redirectTo: 'auth/login',
     pathMatch: 'full'  // Add pathMatch property
   },
-  ...tab_routes,  {
+  ...tab_routes,
+  {
     path: 'password-forget',
     loadComponent: () => import('./modale/password-forget/password-forget.page').then( m => m.PasswordForgetPage)
   }
