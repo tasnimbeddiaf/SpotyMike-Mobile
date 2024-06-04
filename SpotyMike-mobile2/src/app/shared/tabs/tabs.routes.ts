@@ -3,39 +3,39 @@ import { TabsPage } from './tabs.page';
 
 export const tab_routes: Routes = [
   {
-    path: 'menu',
+    path: 'home',
     component: TabsPage,
     children: [
       {
         path: 'home',
         loadComponent: () =>
-          import('../../pages/tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../../layout/pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'tab2',
+        path: 'like',
         loadComponent: () =>
-          import('../../pages/tab2/tab2.page').then((m) => m.Tab2Page),
+          import('../../layout/pages/tab2/tab2.page').then((m) => m.Tab2Page),
       },
       {
-        path: 'tab3',
+        path: 'playlist',
         loadComponent: () =>
-          import('../../pages/tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../../layout/pages/tab3/tab3.page').then((m) => m.Tab3Page),
       },
       {
-        path: 'tab4',
+        path: 'profile',
         loadComponent: () =>
-          import('../../pages/tab4/tab4.page').then((m) => m.Tab4Page),
+          import('../../layout/pages/tab4/tab4.page').then((m) => m.Tab4Page),
       },
-      {
-        path: '',
-        redirectTo: '/tabs/home',
-        pathMatch: 'full',
-      },
+      // {
+      //   path: '',
+      //   redirectTo: '/home/home',
+      //   pathMatch: 'full',
+      // },
     ],
   },
   {
     path: '',
-    redirectTo: '/menu/home',
+    redirectTo: '/home/home',
     pathMatch: 'full',
   },
 ];
