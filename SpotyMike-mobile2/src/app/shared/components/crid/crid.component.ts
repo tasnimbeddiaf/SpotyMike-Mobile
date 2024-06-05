@@ -18,7 +18,8 @@ public AllListeSong =  [
   {
     name :"Amelia Cantata",
     image: "../assets/icon/img.png",
-    song :"lettre"
+    song :"lettre",
+    url_stremaing :"https://open.spotify.com/intl-fr/track/25vm06Gr13LbO7a8A1gVB4?si=981eea3ac4a24531"
 
   },
   {
@@ -30,7 +31,7 @@ public AllListeSong =  [
     name :"dadju",
     image: "../assets/icon/img.png",
     song : 'Amour'
-  },
+  }
 ];
 
   constructor() { }
