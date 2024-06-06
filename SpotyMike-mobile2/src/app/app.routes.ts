@@ -21,6 +21,10 @@ export const routes: Routes = [
     redirectTo: 'auth/login',
     pathMatch: 'full'  // Add pathMatch property
   },
-  ...tab_routes,
+  ...tab_routes,  {
+    path: 'play-songs',
+    loadComponent: () => import('./modale/play-songs/play-songs.page').then( m => m.PlaySongsPage)
+  },
+
 
 ]

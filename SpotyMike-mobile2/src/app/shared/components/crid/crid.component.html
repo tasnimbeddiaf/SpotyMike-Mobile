@@ -1,9 +1,9 @@
 <ion-grid>
   <ion-row>
     @for (item of AllListeSong; track $index) {
-      <ion-col><img [src]="item.image" class="sapce-img" >
-        <p>{{item.name }}</p>
-        <p class="title-song">{{item.song }}</p>
+      <ion-col (click)="playSong(item.urlsong)"><img [src]="item.image ||'assets/icon/img.png'" class="sapce-img" >
+        <p>{{item.artist.fullname }}</p>
+        <p class="title-song">{{item.title }}</p>
       </ion-col>
     }
   </ion-row>

@@ -40,6 +40,12 @@ export class LastplayComponent  implements OnInit {
   ]
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    for(let i=0;i<this.LastplaydedList.length;i++){
+
+
+    }
+
+  }
 
 }
