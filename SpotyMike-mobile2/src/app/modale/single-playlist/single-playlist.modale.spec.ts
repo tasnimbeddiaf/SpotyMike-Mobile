@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SinglePlaylistPage } from './single-playlist.page';
+import { SinglePlaylistModale } from './single-playlist.modale';
 
 describe('SinglePlaylistPage', () => {
-  let component: SinglePlaylistPage;
-  let fixture: ComponentFixture<SinglePlaylistPage>;
+  let component: SinglePlaylistModale;
+  let fixture: ComponentFixture<SinglePlaylistModale>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SinglePlaylistPage);
+    fixture = TestBed.createComponent(SinglePlaylistModale);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

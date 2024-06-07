@@ -13,7 +13,7 @@ import { atOutline, heartOutline, home, homeOutline, musicalNote, musicalNoteOut
   imports: [IonButton, IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 
-export class SinglePlaylistPage implements OnInit {
+export class SinglePlaylistModale implements OnInit {
 
   constructor() { 
     addIcons({ heartOutline, play, pause, personOutline, homeOutline, musicalNoteOutline, shareSocialOutline});

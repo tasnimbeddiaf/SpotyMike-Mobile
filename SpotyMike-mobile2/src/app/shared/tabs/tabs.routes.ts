@@ -21,11 +21,6 @@ export const tab_routes: Routes = [
         ],
       },
       {
-        path: 'single-playlist',
-        loadComponent: () =>
-          import('../../layout/pages/single-playlist/single-playlist.page').then((m) => m.SinglePlaylistPage),
-      },
-      {
         path: 'playlist',
         loadComponent: () =>
           import('../../pages/tab3/tab3.page').then((m) => m.Tab3Page),
