@@ -1,0 +1,15 @@
+<ion-grid>
+  <ion-row>
+    @for (item of LastplaydedList; track $index) {
+      <ion-col offset="6" offset-md="4" offset-lg="2">
+        <div class="position-name-artist">
+          <img class="sapce-img" [src]="item.image">
+          <div class="name-possition">
+            <p>{{ item.title }}</p>
+            <span>{{ item.artist.fullname }}</span>
+          </div>
+        </div>
+      </ion-col>
+    }
+  </ion-row>
+</ion-grid>

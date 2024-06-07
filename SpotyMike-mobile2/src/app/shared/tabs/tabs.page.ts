@@ -17,6 +17,6 @@ export class TabsPage {
 
   constructor() {
     // this.albumService.getAlbums();
-    // addIcons({ heartOutline,personOutline,homeOutline,musicalNotesOutline});
+    addIcons({ heartOutline,personOutline,homeOutline,musicalNotesOutline});
   }
 }

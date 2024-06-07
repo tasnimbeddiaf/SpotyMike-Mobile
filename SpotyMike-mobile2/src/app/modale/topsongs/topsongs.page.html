@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon name="chevron-back-outline" (click)="modal.dismiss()"></ion-icon>
+    <ion-title>
+      TopSongs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-grid>
+  <ion-row>
+    @for (item of TopSongs; track $index) {
+      <ion-col offset="6" offset-md="4" offset-lg="2" (click)="playSong(item.urlsong)">
+        <div class="position-name-artist">
+          <img class="space-img" [src]="item.image || 'assets/icon/img.png'" />
+          <div class="name-possition">
+            <p>{{ item.title}}</p>
+          </div>
+        </div>
+      </ion-col>
+    }
+  </ion-row>
+</ion-grid>
+

@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <div class="header-container">
+      <ion-icon style="color: white; font-size: 1.6rem;" name="chevron-back-outline" class="back-icon" (click)="modal.dismiss()"></ion-icon>
+      <p class="header-text">{{ name }}<span class="dots">...</span></p>
+    </div>
+    <div class="space-img">
+      <img class="img" src="../assets/icon/img.png">
+    </div>
+    <div class="icon">
+      <ion-icon [name]="isFavorite ? 'heart' : 'heart-outline'" (click)="toggleFavorite()"></ion-icon>
+      <ion-icon name="share-social-outline" (click)="Sharednetworks()"></ion-icon>
+    </div>
+    <div class="play-time">
+      <span>{{ formattedCurrentTime }}</span>
+      <ion-range min="0" [max]="duration" [(ngModel)]="currentTime" (ionChange)="seekTo($event)"></ion-range>
+      <span>{{ formattedDurationTime }}</span>
+    </div>
+    <div class="icon-music">
+      <ion-icon name="repeat-outline"></ion-icon>
+      <ion-icon name="play-skip-back-outline"></ion-icon>
+      <ion-icon [name]="play ? 'pause-outline' :'play-outline'" (click)="playMusics()"></ion-icon>
+      <ion-icon name="play-skip-forward-outline"></ion-icon>
+      <ion-icon name="shuffle-outline"></ion-icon>
+    </div>
+  </ion-header>
+</ion-content>
