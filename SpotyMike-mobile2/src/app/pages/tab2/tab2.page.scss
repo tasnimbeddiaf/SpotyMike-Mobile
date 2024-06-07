@@ -1,0 +1,39 @@
+/* Style pour l'élément ion-item */
+ion-item {
+  display: flex; /* Utiliser flexbox pour aligner les éléments en ligne */
+  align-items: center; /* Aligner verticalement les éléments */
+  padding: 10px; /* Ajouter un padding autour de chaque élément */
+}
+
+/* Style pour l'élément ion-thumbnail */
+ion-thumbnail {
+  width: 60px; /* Définir la largeur de l'image */
+  height: 60px; /* Définir la hauteur de l'image */
+  margin-right: 15px; /* Ajouter une marge à droite pour l'espace entre l'image et le texte */
+}
+
+/* Style pour l'image à l'intérieur de ion-thumbnail */
+ion-thumbnail img {
+  width: 100%; /* Ajuster la largeur de l'image pour remplir ion-thumbnail */
+  height: 100%; /* Ajuster la hauteur de l'image pour remplir ion-thumbnail */
+  object-fit: cover; /* Redimensionner l'image pour qu'elle couvre complètement ion-thumbnail */
+}
+
+/* Style pour l'élément ion-label */
+ion-label {
+  flex: 1; /* Permettre à ion-label de remplir l'espace disponible */
+}
+
+/* Style pour le titre */
+h1 {
+  margin: 0; /* Supprimer les marges par défaut */
+  font-size: 1.2rem; /* Taille de police pour le titre */
+  color: #333; /* Couleur du texte */
+}
+
+/* Style pour l'artiste */
+h2 {
+  margin: 0; /* Supprimer les marges par défaut */
+  font-size: 1rem; /* Taille de police pour le nom de l'artiste */
+  color: #777; /* Couleur du texte */
+}

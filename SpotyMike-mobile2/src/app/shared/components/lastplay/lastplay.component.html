@@ -1,15 +1,11 @@
-<ion-grid>
-  <ion-row>
-    @for (item of LastplaydedList; track $index) {
-      <ion-col offset="6" offset-md="4" offset-lg="2">
-        <div class="position-name-artist">
-          <img class="sapce-img" [src]="item.image">
-          <div class="name-possition">
-            <p>{{ item.title }}</p>
-            <span>{{ item.artist.fullname }}</span>
-          </div>
-        </div>
-      </ion-col>
-    }
-  </ion-row>
-</ion-grid>
+
+
+@for (item of LastplaydedList; track $index) {
+  <ion-item>
+  <ion-thumbnail slot="start">
+    <img alt="Silhouette of mountains" [src]="item.image"/>
+  </ion-thumbnail>
+  <ion-label><h1>{{item.artist.fullname}}</h1><h2>artiste</h2><h4 class="duration">{{item.duration}}</h4></ion-label>
+</ion-item>
+}
+

@@ -1,9 +1,5 @@
-ion-row{
-  margin-left: -89%;
-  margin-right: 0px;
-  padding-left: 1px;
-  ion-col{
-  }
+ion-item {
+  --background: transparent; 
 }
 .sapce-img{
   height: 57px;
@@ -22,4 +18,8 @@ p {
   padding: 1px;
   padding-left: 20%;
   color: black;
+  
+.duration {
+  display: inline-block; 
+  text-align: center;
 }
