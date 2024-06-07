@@ -33,6 +33,6 @@ export const routes: Routes = [
     redirectTo: 'auth/login',
     pathMatch: 'full'  // Add pathMatch property
   },
-  ...tab_routes
+  ...tab_routes,
 
 ]

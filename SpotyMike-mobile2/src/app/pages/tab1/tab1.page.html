@@ -1,0 +1,20 @@
+<div class="album-container">
+  <div class="album-title">New Album</div>
+  <div class="music-type">R & B Hits</div>
+  <div class="discover-text">Discover 87 songs !</div>
+  <!-- <img class="album-image" src="./assets/icon/logo.png" alt="Image de l'album"> -->
+  <div class="album-frame"></div>
+  <button class="arrow-right"></button>
+
+</div>
+
+<ion-content>
+  <div class="navbar-top-song">
+    <p>Tops Songs<a type="submit" class="show-All" (click)="OpenModaleTopSong()">See All</a></p>
+    <app-crid></app-crid>
+  </div>
+  <div class="navbar-top-lasplayed">
+    <p>Last Played<a type="submit" class="show-All">See All</a></p>
+    <app-lastplay></app-lastplay>
+  </div>
+</ion-content>

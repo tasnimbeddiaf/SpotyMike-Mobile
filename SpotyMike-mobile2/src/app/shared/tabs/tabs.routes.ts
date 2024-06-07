@@ -6,11 +6,11 @@ export const tab_routes: Routes = [
     path: 'home',
     component: TabsPage,
     children: [
-      {
-        path: 'home',
-        loadComponent: () =>
-          import('../../layout/pages/home/home.page').then((m) => m.HomePage),
-      },
+      // {
+      //   path: 'home',
+      //   loadComponent: () =>
+      //     import('../../layout/pages/home/home.page').then((m) => m.HomePage),
+      // },
       {
         path: 'like',
         loadComponent: () =>

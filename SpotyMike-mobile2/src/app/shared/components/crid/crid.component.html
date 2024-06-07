@@ -1,0 +1,11 @@
+<ion-grid>
+  <ion-row>
+    @for (item of AllListeSong; track $index) {
+      <ion-col><img [src]="item.image" class="sapce-img" >
+        <p>{{item.name }}</p>
+        <p class="title-song">{{item.song }}</p>
+      </ion-col>
+    }
+  </ion-row>
+</ion-grid>
+

@@ -1,0 +1,30 @@
+.show-all-song{
+  text-align: left;
+}
+ion-row{
+  padding: 0%;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding-left: 1px;
+  p {
+    margin-top: 9%;
+    text-align: center; /* Centre le texte sous l'image */
+    font-size: 1.1rem;
+    color: black;
+  }
+  .title-song{
+    margin: -9%;
+    color: #a3a3a3;;
+    font-size: 1rem;
+  }
+  ion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
+.sapce-img{
+  height:90px;
+  width: 90px;
+}
