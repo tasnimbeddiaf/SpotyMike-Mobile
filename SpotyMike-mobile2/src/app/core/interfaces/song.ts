@@ -4,6 +4,7 @@ export interface Song {
   image: string;
   top_song_acount: number;
   urlsong: string;
+  duration  :string;
   artist: Artist; // Ajout de la propriété artist
 }
 export interface Artist {

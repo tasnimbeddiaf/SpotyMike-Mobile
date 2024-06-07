@@ -33,6 +33,7 @@ private firebaseService= inject(ServiceFirebaseService);
         image: data.image,
         top_song_acount: data.top_song_acount,
         urlsong: data.urlsong,
+        duration :data.duration,
         artist: artiste,
       } as Song;
     }));
