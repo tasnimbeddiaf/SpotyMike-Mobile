@@ -26,13 +26,7 @@ export class LoginPage implements OnInit {
   error:string ='';
   private router =inject(Router);
   private firebaseService= inject(ServiceFirebaseService);
-  private ListUsers =
-  [
-    {
-      Email : "nnamorykanate@gmail.com",
-      Password : "Namorysoum@!"
-    },
-  ]
+
   constructor(private modalCtrl: ModalController) {
     addIcons({eyeOffOutline,eyeOutline});
   }
@@ -53,6 +47,7 @@ export class LoginPage implements OnInit {
         setTimeout(async () => {
         this.submitForm = false; // Cachez l'indicateur de chargement après le délai
           const reponse = await this.firebaseService.getUsers(this.bioSection.value.email, this.bioSection.value.password);
+          console.log(reponse);
           if(reponse.length>0){
             //todo add localStorage....
             this.router.navigate(['menu/home']);

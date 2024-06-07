@@ -8,31 +8,24 @@ export const routes: Routes = [
     children: [
       {
         path: 'login',
-        loadComponent: () => import('./layout/pages/login/login.page').then(m => m.LoginPage)
+        loadComponent: () => import('./pages/login/login.page').then(m => m.LoginPage)
       },
       {
         path: 'register',
-        loadComponent: () => import('./layout/pages/register/register.page').then(m => m.RegisterPage)
+        loadComponent: () => import('./pages/register/register.page').then(m => m.RegisterPage)
       },
     ]
   },
-  // {
-  //   path: 'home',
-  //   //canActivate:[authGuard],
-  //   loadComponent: () =>
-  //     import('./shared/tabs/tabs.page').then((m) => m.TabsPage),
-  //   children:[
-  //     {
-  //       path: 'homepage',
-  //       loadComponent: () => import('./layout/pages/home/home.page').then( m => m.HomePage),
-  //     },
-  //   ]
-  // },
   {
     path: '',
     redirectTo: 'auth/login',
     pathMatch: 'full'  // Add pathMatch property
   },
   ...tab_routes,
+  {
+    path: 'play-songs',
+    loadComponent: () => import('./modale/play-songs/play-songs.page').then( m => m.PlaySongsPage)
+  },
+
 
 ]

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { IonGrid,IonCol,IonRow} from '@ionic/angular/standalone';
+import { Song } from 'src/app/core/interfaces/song';
+import { LastplayService } from 'src/app/core/services/lastplay.service';
 
 @Component({
   selector: 'app-lastplay',
@@ -16,30 +18,15 @@ import { IonGrid,IonCol,IonRow} from '@ionic/angular/standalone';
 export class LastplayComponent  implements OnInit {
 
   constructor() { }
-
-  public LastplaydedList=[
-    {
-      name :"Amelia Cantata",
-      image: "../assets/icon/img.png",
-      song :"lettre",
-      duration :"5:00"
-
-    },
-    {
-      name :"davido",
-      image: "../assets/icon/img.png",
-      song :"IF",
-      duration :"6:00"
-    },
-    {
-      name :"dadju",
-      image: "../assets/icon/img.png",
-      song : 'Amour',
-      duration :"4:30"
-    },
-  ]
+private lastplayAll = inject(LastplayService);
+  public LastplaydedList :Song[] = [];
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.LastplaydedList = this.lastplayAll.getmylastplayListe();
+    console.log(this.LastplaydedList);
+  }
+
+
 
 }
