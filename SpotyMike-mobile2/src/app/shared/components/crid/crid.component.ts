@@ -16,7 +16,7 @@ import { Song } from 'src/app/core/interfaces/song';
   ]
 })
 export class CridComponent  implements OnInit {
-  private firebaseService= inject(ServiceFirebaseService);
+private firebaseService= inject(ServiceFirebaseService);
 public AllListeSong :Song[] =[]
 
   constructor(private modalCtrl: ModalController) { }
@@ -36,7 +36,6 @@ public AllListeSong :Song[] =[]
     }));
     this.AllListeSong = songsWithArtists;
     console.log(this.AllListeSong);
-
   }
 
   async playSong(audioUrl: string){

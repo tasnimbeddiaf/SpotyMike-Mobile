@@ -7,6 +7,7 @@ import { FavoriteService } from 'src/app/core/favorite-service.service';
 import { addIcons } from 'ionicons';
 import { chevronBack, chevronBackOutline, heart, heartOutline, pauseOutline, playOutline, playSkipBackOutline, playSkipForwardOutline, repeatOutline, shareSocialOutline, shuffleOutline } from 'ionicons/icons';
 import { Router } from '@angular/router';
+import { LastplayService } from 'src/app/core/services/lastplay.service';
 
 @Component({
   selector: 'app-play-songs',
@@ -18,7 +19,8 @@ import { Router } from '@angular/router';
 export class PlaySongsPage implements OnInit {
   private route = inject(Router);
 
-  private favoriteService = inject(FavoriteService)
+  private favoriteService = inject(FavoriteService);
+  private lastplayService = inject(LastplayService);
   song: any;
   private audio = new Audio();
   isFavorite: boolean = false;
@@ -75,6 +77,7 @@ export class PlaySongsPage implements OnInit {
       this.audio.pause();
     } else {
       this.audio.play();
+      this.lastplayService.mylastplaylisteadd(this.song);
     }
     this.play = !this.play;
   }

@@ -25,6 +25,13 @@ export class ServiceFirebaseService {
     const songs = querySnapshot.docs.map(doc => doc.data());
     return songs;
   }
+  async getAllSong() {
+    const q = query(this.songs, orderBy("top_song_acount", "desc"));
+    const querySnapshot = await getDocs(q);
+    const songs = querySnapshot.docs.map(doc => doc.data());
+    return songs;
+  }
+
   private artists = collection(this.db, 'artistes');
   async getartist(id_artist: string) {
     const q = query((this.artists), where("artist_id", '==', id_artist));

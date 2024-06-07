@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonGrid, IonCol, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonGrid, IonCol, IonIcon, ModalController } from '@ionic/angular/standalone';
 import {chevronBackOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
+import { ServiceFirebaseService } from 'src/app/core/services/firebase-service.service';
+import { Song } from 'src/app/core/interfaces/song';
+import { PlaySongsPage } from '../play-songs/play-songs.page';
 
 @Component({
   selector: 'app-topsongs',
@@ -13,36 +16,36 @@ import { addIcons } from 'ionicons';
   imports: [IonIcon, IonCol, IonGrid, IonRow, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class TopsongsPage implements OnInit {
-buttonBack() {
-throw new Error('Method not implemented.');
-}
-
-  constructor() {
+modal: any;
+private firebaseService= inject(ServiceFirebaseService);
+  constructor(private modalCtrl: ModalController) {
     addIcons({chevronBackOutline})
    }
-   public TopSongs =[
-    {
-      name :"Amelia Cantata",
-      image: "../assets/icon/img.png",
-      song :"lettre",
-      duration :"5:00"
+   public TopSongs :Song[] = [];
 
-    },
-    {
-      name :"davido",
-      image: "../assets/icon/img.png",
-      song :"IF",
-      duration :"6:00"
-    },
-    {
-      name :"dadju",
-      image: "../assets/icon/img.png",
-      song : 'Amour',
-      duration :"4:30"
-    },
-   ]
-
-  ngOnInit() {
+  async ngOnInit() {
+    const reponse = await this.firebaseService.getAllSong();
+    const songsWithArtists = await Promise.all(reponse.map(async (data: any) => {
+      const artiste = await this.firebaseService.getartist(data.artist_id);
+      return {
+        album_id: data.album_id,
+        title: data.title,
+        image: data.image,
+        top_song_acount: data.top_song_acount,
+        urlsong: data.urlsong,
+        artist: artiste,
+      } as Song;
+    }));
+    this.TopSongs = songsWithArtists;
+    console.log(this.TopSongs);
+  }
+  async playSong(audioUrl: string){
+    const song = this.TopSongs.find(item => item.urlsong === audioUrl);
+    const modal = await this.modalCtrl.create({
+      component:PlaySongsPage,
+      componentProps: { song }
+    });
+     modal.present();
   }
 
 }
