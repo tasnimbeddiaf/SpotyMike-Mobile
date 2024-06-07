@@ -7,8 +7,8 @@ import { atOutline, heartOutline, home, homeOutline, musicalNote, musicalNoteOut
 
 @Component({
   selector: 'app-single-playlist',
-  templateUrl: './single-playlist.page.html',
-  styleUrls: ['./single-playlist.page.scss'],
+  templateUrl: './single-playlist.modale.html',
+  styleUrls: ['./single-playlist.modale.scss'],
   standalone: true,
   imports: [IonButton, IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })

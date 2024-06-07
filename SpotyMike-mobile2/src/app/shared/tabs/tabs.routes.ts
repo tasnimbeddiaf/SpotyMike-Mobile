@@ -24,6 +24,18 @@ export const tab_routes: Routes = [
         path: 'playlist',
         loadComponent: () =>
           import('../../pages/tab3/tab3.page').then((m) => m.Tab3Page),
+        // children: [
+        //   {
+        //     path: 'playlist-id',
+        //     loadComponent: () =>
+        //       import('../../modale/single-playlist/single-playlist.modale').then((m) => m.SinglePlaylistModale),
+        //   },
+        // ]
+      },
+      {
+        path: 'playlist-id',
+        loadComponent: () =>
+          import('../../modale/single-playlist/single-playlist.modale').then((m) => m.SinglePlaylistModale),
       },
       {
         path: 'profile',
