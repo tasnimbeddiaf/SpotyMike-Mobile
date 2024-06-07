@@ -2,6 +2,7 @@ import { Component, EnvironmentInjector, inject } from '@angular/core';
 import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {heartOutline,personOutline,homeOutline,musicalNotesOutline } from 'ionicons/icons';
+import { FirestoreService } from 'src/app/core/services/firestore.service';
 
 @Component({
   selector: 'app-tabs',
@@ -12,8 +13,10 @@ import {heartOutline,personOutline,homeOutline,musicalNotesOutline } from 'ionic
 })
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
+  private albumService = inject(FirestoreService)
 
   constructor() {
-    addIcons({ heartOutline,personOutline,homeOutline,musicalNotesOutline});
+    // this.albumService.getAlbums();
+    // addIcons({ heartOutline,personOutline,homeOutline,musicalNotesOutline});
   }
 }
