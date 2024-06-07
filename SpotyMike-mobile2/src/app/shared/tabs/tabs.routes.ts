@@ -15,7 +15,15 @@ export const tab_routes: Routes = [
       {
         path: 'like',
         loadComponent: () =>
-          import('../../pages/tab2/tab2.page').then((m) => m.Tab2Page),
+          import('../../layout/pages/like/like.page').then((m) => m.LikePage),
+        children: [
+          
+        ],
+      },
+      {
+        path: 'single-playlist',
+        loadComponent: () =>
+          import('../../layout/pages/single-playlist/single-playlist.page').then((m) => m.SinglePlaylistPage),
       },
       {
         path: 'playlist',
@@ -27,11 +35,11 @@ export const tab_routes: Routes = [
         loadComponent: () =>
           import('../../pages/tab4/tab4.page').then((m) => m.Tab4Page),
       },
-      // {
-      //   path: '',
-      //   redirectTo: '/home/home',
-      //   pathMatch: 'full',
-      // },
+      {
+        path: '',
+        redirectTo: '/home/home',
+        pathMatch: 'full',
+      },
     ],
   },
   {

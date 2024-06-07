@@ -1,4 +1,9 @@
-body {
-    background-color: white;
+ion-tab-bar {
+    --background: white;
+  }
+  
+  ion-tab-button {
+    --color-selected: black;
+    --color: black;
   }
   
