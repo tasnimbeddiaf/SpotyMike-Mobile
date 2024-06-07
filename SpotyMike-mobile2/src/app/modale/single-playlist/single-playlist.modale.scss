@@ -19,6 +19,14 @@ ion-content {
     -webkit-transform: rotate(135deg);
     z-index: 3;
   }
+
+  .arrow-left:hover {
+    transform: rotate(135deg) scale(1.1); 
+    }
+
+    .arrow-left:active {
+        transform: rotate(135deg) scale(0.9);
+    }
   
   .img-playlist {
     position: absolute;
