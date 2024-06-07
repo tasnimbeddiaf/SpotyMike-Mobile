@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { IonGrid,IonCol,IonRow} from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonLabel, IonItem, IonList,IonThumbnail } from '@ionic/angular/standalone';
 import { Song } from 'src/app/core/interfaces/song';
 import { LastplayService } from 'src/app/core/services/lastplay.service';
 
@@ -8,12 +8,7 @@ import { LastplayService } from 'src/app/core/services/lastplay.service';
   templateUrl: './lastplay.component.html',
   styleUrls: ['./lastplay.component.scss'],
   standalone:true,
-  imports:[
-    IonGrid,
-    IonCol,
-    IonRow
-
-    ]
+  imports:[IonItem,IonThumbnail,IonLabel]
 })
 export class LastplayComponent  implements OnInit {
 
@@ -26,7 +21,4 @@ private lastplayAll = inject(LastplayService);
     this.LastplaydedList = this.lastplayAll.getmylastplayListe();
     console.log(this.LastplaydedList);
   }
-
-
-
 }
