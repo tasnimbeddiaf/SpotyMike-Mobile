@@ -17,9 +17,14 @@ export const tab_routes: Routes = [
           import('../../pages/tab2/tab2.page').then((m) => m.Tab2Page),
       },
       {
-        path: 'playlist',
+        path: 'playlists',
         loadComponent: () =>
           import('../../pages/tab3/tab3.page').then((m) => m.Tab3Page),
+      },
+      {
+        path: 'playlist-id',
+        loadComponent: () =>
+          import('../../modale/single-playlist/single-playlist.modale').then((m) => m.SinglePlaylistModale),
       },
       {
         path: 'profile',

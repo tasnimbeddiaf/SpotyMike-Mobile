@@ -50,7 +50,7 @@ export class LoginPage implements OnInit {
           console.log(reponse);
           if(reponse.length>0){
             //todo add localStorage....
-            this.router.navigate(['menu/home']);
+            this.router.navigate(['home/home']);
           }else{
             this.error = "Email or password incorrect";
           }
