@@ -12,10 +12,11 @@ import { atOutline, heartOutline, home, homeOutline, musicalNote, musicalNoteOut
   standalone: true,
   imports: [IonButton, IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
+
 export class SinglePlaylistPage implements OnInit {
 
   constructor() { 
-    addIcons({ heartOutline, play, pause, personOutline, homeOutline, musicalNoteOutline, shareSocialOutline})
+    addIcons({ heartOutline, play, pause, personOutline, homeOutline, musicalNoteOutline, shareSocialOutline});
   }
 
   ngOnInit() {
