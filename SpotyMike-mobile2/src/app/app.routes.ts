@@ -33,6 +33,10 @@ export const routes: Routes = [
     redirectTo: 'auth/login',
     pathMatch: 'full'  // Add pathMatch property
   },
-  ...tab_routes
+  ...tab_routes,
+  {
+    path: 'single-playlist',
+    loadComponent: () => import('./layout/pages/single-playlist/single-playlist.page').then( m => m.SinglePlaylistPage)
+  }
 
 ]
