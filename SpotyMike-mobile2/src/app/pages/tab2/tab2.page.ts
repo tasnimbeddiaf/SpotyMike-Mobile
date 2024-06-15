@@ -1,4 +1,4 @@
-import { FavoriteService } from 'src/app/core/favorite-service.service';
+import { FavoriteService } from 'src/app/core/services/favorite-service.service';
 import { Component, inject } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonLabel, IonItem, IonList,IonThumbnail } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
