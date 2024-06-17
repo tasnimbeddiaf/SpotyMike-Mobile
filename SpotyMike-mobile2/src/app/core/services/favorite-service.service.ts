@@ -10,12 +10,8 @@ export class FavoriteService {
   addFavorite(song: Song) {
     this.favoriteSongs.push(song);
   }
-
   removeFavorite(song: Song) {
     this.favoriteSongs = this.favoriteSongs.filter(s => s !== song);
-  }
-  isFavorite(song: Song): boolean {
-    return this.favoriteSongs.some(s => s === song);
   }
   getFavoriteSongs(): Song[] {
     return this.favoriteSongs;

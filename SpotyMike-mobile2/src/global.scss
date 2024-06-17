@@ -36,7 +36,6 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
 
-
 * {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -74,6 +73,16 @@ ion-button.ion-activated {
 }
 .back{
   font-size: 1.9rem;
+}
+.show-All{
+  position: relative;
+  top: 10%;
+  left: 55%;
+  background: transparent;
+  cursor: pointer;
+  color: #15AB90;
+  font-size: 14px;
+  font-weight: medium;
 }
 
 

@@ -3,8 +3,7 @@ export interface Song {
   title: string;
   image: string;
   top_song_acount: number;
-  urlsong: string;
-  duration  :string;
+  song_id : string;
   artist: Artist; // Ajout de la propriété artist
 }
 export interface Artist {
