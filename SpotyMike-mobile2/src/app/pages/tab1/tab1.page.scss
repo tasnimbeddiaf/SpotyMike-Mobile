@@ -15,16 +15,19 @@ p{
   color:#171621;
   font-size: 1.4rem;
   margin: 1%;
-  margin-left: 29px;
+  margin-left: 13px;
 }
 .show-All{
   position: relative;
   top: 10%;
-  left: 44%;
-  /* Adjust this value as needed */
+  left: 55%;
+  z-index: 3;
+  background: transparent;
   transform: translateY(-50%);
   cursor: pointer;
   color: #15AB90;
+  font-size: 14px;
+  font-weight: medium;
 }
 .album-container {
   position: absolute;
