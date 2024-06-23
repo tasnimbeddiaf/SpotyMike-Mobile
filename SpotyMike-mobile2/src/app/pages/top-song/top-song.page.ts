@@ -1,3 +1,4 @@
+import { PlaysongPage } from 'src/app/modale/playsong/playsong.page';
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -7,7 +8,6 @@ import { addIcons } from 'ionicons';
 import { ServiceFirebaseService } from 'src/app/core/services/services-firebase.service';
 import { Song } from 'src/app/core/interfaces/song';
 import { Router } from '@angular/router';
-import { PlaysongPage } from '../playsong/playsong.page';
 import { LastplayService } from 'src/app/core/services/lastplay.service';
 
 @Component({

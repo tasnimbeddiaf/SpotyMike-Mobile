@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { IonGrid, IonCol, IonRow, ModalController } from '@ionic/angular/standalone';
 import { Song } from 'src/app/core/interfaces/song';
 import { ServiceFirebaseService } from 'src/app/core/services/services-firebase.service';
-import { PlaysongPage } from 'src/app/pages/playsong/playsong.page';
+import { PlaysongPage } from 'src/app/modale/playsong/playsong.page';
 @Component({
   selector: 'app-crid',
   templateUrl: './crid.component.html',
