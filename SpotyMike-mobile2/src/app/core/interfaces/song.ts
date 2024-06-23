@@ -1,9 +1,10 @@
 export interface Song {
   album_id: string;
+  artist_id:string;
   title: string;
   image: string;
-  top_song_acount: number;
   song_id : string;
+  top_song_acount: number;
   artist: Artist; // Ajout de la propriété artist
 }
 export interface Artist {
@@ -13,5 +14,6 @@ export interface Artist {
   label :string
   top_artist_count :number
   user_id :string
+  avatar ?:string,
   // Ajoutez d'autres propriétés de l'artiste si nécessaire
 }

@@ -1,6 +1,7 @@
+import { Artist } from './../interfaces/song';
 import { Injectable } from '@angular/core';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, where, query, and, orderBy, limit } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs, where, query, and, orderBy, limit, count, DocumentData, Query } from 'firebase/firestore/lite';
 import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
@@ -44,5 +45,26 @@ export class ServiceFirebaseService {
     const artistDocs = querySnapshot.docs.map(doc => doc.data());
     return artistDocs[0];
   }
+  async getTopArtist() {
+    const q = query((this.artists), orderBy("top_artist_count", "desc"));
+    const querySnapshot = await getDocs(q);
+    const artist = querySnapshot.docs.map(doc => doc.data());
+    return artist;
+  }
+  private album = collection(this.db, 'albums');
+  async getTopAlbum() {
+    const q = query((this.album), orderBy("top_album_count", "desc"));
+    const querySnapshot = await getDocs(q);
+    const albumAll = querySnapshot.docs.map(doc => doc.data());
+    return albumAll;
+  }
+   async getArtistprofile(fullnname :string) {
+    const q = query((this.artists),where("fullname","==",fullnname));
+    const snapshot = await getDocs(q);;
+    const  answer = snapshot.docs.map(doc => doc.data());
+    return answer;
+  }
 }
+
+
 
