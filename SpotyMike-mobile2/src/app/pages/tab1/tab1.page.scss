@@ -11,7 +11,12 @@ ion-content {
   padding-top: 8%;
   margin-top: 5%;
 }
-.navbar-top-song{
+.navbar-gobal{
+  padding-left: 3px;
+  padding-top: 4%;
+  margin-top: 0%;
+}
+.navbar-top-lasplayed{
   padding-left: 3px;
   padding-top: 4%;
   margin-top: 0%;
@@ -109,3 +114,15 @@ p{
   height: 99%;
   width: 229%;
 }
+.icon-music {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+

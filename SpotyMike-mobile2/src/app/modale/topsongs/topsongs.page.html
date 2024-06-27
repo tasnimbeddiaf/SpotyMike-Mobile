@@ -6,11 +6,13 @@
     </div>
     <div class="container">
       @for (item of TopSongs; track $index) {
-      <div class="grid">
-        <img [src]="item.image ||'assets/icon/img.png'" class="sapce-img">
-        <span>{{item.title}}</span>
-        <p class="artist-position">{{item.artist.fullname}}</p>
-      </div>
+      <ion-item>
+        <div class="grid" (click)="playSong(item.song_id,item.artist.fullname)">
+          <img [src]="item.image ||'assets/icon/img.png'" class="sapce-img">
+          <span>{{item.title}}</span>
+          <p class="artist-position">{{item.artist.fullname}}</p>
+        </div>
+      </ion-item>
       }
     </div>
   </ion-grid>

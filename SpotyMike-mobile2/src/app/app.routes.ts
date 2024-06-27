@@ -26,6 +26,30 @@ export const routes: Routes = [
     path: 'music-genre',
     loadComponent: () => import('./shared/components/music-genre/music-genre.page').then( m => m.MusicGenrePage)
   },
+  {
+    path: 'top-song',
+    loadComponent: () => import('./pages/top-song/top-song.page').then( m => m.TopSongPage)
+  },
+  {
+    path: 'top-artists',
+    loadComponent: () => import('./shared/components/top-artists/top-artists.page').then( m => m.TopArtistsPage)
+  },
+  {
+    path: 'top-album',
+    loadComponent: () => import('./shared/components/top-album/top-album.page').then( m => m.TopAlbumPage)
+  },
+  {
+    path: 'topAllalbum',
+    loadComponent: () => import('./pages/top-album/top-album.page').then( m => m.TopAlbumPage)
+  },
+  {
+    path: 'topAllartist',
+    loadComponent: () => import('./pages/top-artist/top-artist.page').then( m => m.TopArtistPage)
+  },
+
+
+
+
 
 
 
