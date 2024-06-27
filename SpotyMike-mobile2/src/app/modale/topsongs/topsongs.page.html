@@ -1,17 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-icon name="chevron-back-outline" (click)="modal.dismiss()"></ion-icon>
-    <ion-title>
-      TopSongs
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-@for (item of TopSongs; track $index) {
-  <ion-item>
-  <ion-thumbnail slot="start">
-    <img alt="Silhouette of mountains" [src]="item.image||'assets/icon/img.png'"/>
-  </ion-thumbnail>
-  <ion-label><h1>{{item.artist.fullname}}</h1><h2>artiste</h2></ion-label>
-</ion-item>
-}
-
+<ion-content>
+  <ion-grid>
+    <div class="Lead-field">
+      <ion-icon name="chevron-back-outline" (click)="modal.dismiss()"></ion-icon>
+      <p>Top Songs</p>
+    </div>
+    <div class="container">
+      @for (item of TopSongs; track $index) {
+      <div class="grid">
+        <img [src]="item.image ||'assets/icon/img.png'" class="sapce-img">
+        <span>{{item.title}}</span>
+        <p class="artist-position">{{item.artist.fullname}}</p>
+      </div>
+      }
+    </div>
+  </ion-grid>
+</ion-content>

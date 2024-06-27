@@ -1,16 +1,13 @@
-.show-all-song{
-  text-align: left;
+ion-grid{
+  margin-top: 4%;
 }
+
 ion-row{
-  padding: 0%;
-  margin-left: 3px;
-  margin-right: 3px;
-  padding-left: 1px;
   p {
     margin-top: 9%;
     text-align: center; /* Centre le texte sous l'image */
-    font-size: 1.1rem;
-    color: black;
+    font-size: 16px;
+    color: #0D062D;
   }
   .title-song{
     margin: -9%;

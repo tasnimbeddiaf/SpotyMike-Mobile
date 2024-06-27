@@ -23,9 +23,10 @@ export const routes: Routes = [
   },
   ...tab_routes,
   {
-    path: 'play-songs',
-    loadComponent: () => import('./modale/play-songs/play-songs.page').then( m => m.PlaySongsPage)
+    path: 'music-genre',
+    loadComponent: () => import('./shared/components/music-genre/music-genre.page').then( m => m.MusicGenrePage)
   },
+
 
 
 ]

@@ -5,7 +5,7 @@ import { LastplayService } from 'src/app/core/services/lastplay.service';
 
 @Component({
   selector: 'app-lastplay',
-  templateUrl: './lastplay.component.html',
+  templateUrl:'./lastplay.component.html',
   styleUrls: ['./lastplay.component.scss'],
   standalone:true,
   imports:[
