@@ -1,4 +1,4 @@
-import { ServiceFirebaseService } from './../../core/services/firebase-service.service';
+import { ServiceFirebaseService } from 'src/app/core/services/services-firebase.service';
 import { User } from './../../core/interfaces/users';
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,6 +17,7 @@ import {PasswordForgetPage } from'../../modale/password-forget/password-forget.p
   imports: [IonSpinner, IonIcon, IonText, IonButton, IonLabel, IonItem, IonInput, IonList, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,ReactiveFormsModule]
 })
 export class LoginPage implements OnInit {
+[x: string]: any;
 
 
   showPassword: boolean = false;
@@ -40,6 +41,7 @@ export class LoginPage implements OnInit {
       Validators.pattern(/^(?=.*[A-Z])(?=.*[\W_]).*$/),
       Validators.minLength(8),
     ]),
+
   });
   onSubmit(){
     if (this.bioSection.valid) {
@@ -47,7 +49,6 @@ export class LoginPage implements OnInit {
         setTimeout(async () => {
         this.submitForm = false; // Cachez l'indicateur de chargement après le délai
           const reponse = await this.firebaseService.getUsers(this.bioSection.value.email, this.bioSection.value.password);
-          console.log(reponse);
           if(reponse.length>0){
             //todo add localStorage....
             this.router.navigate(['home/home']);

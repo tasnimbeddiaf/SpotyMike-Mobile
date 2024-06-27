@@ -6,3 +6,13 @@ ion-content {
     padding-right: 15%;
   }
 }
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%; /* Ensure the container takes full height */
+}
+
+ion-router-outlet {
+  flex: 1; /* Ensure the router outlet grows to fill the available space */
+}

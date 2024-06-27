@@ -3,7 +3,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonButton, IonIcon, ModalController, NavParams, IonRange } from '@ionic/angular/standalone';
-import { FavoriteService } from 'src/app/core/favorite-service.service';
+import { FavoriteService } from 'src/app/core/services/favorite-service.service';
 import { addIcons } from 'ionicons';
 import { chevronBack, chevronBackOutline, heart, heartOutline, pauseOutline, playOutline, playSkipBackOutline, playSkipForwardOutline, repeatOutline, shareSocialOutline, shuffleOutline } from 'ionicons/icons';
 import { Router } from '@angular/router';

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonGrid, IonCol, IonIcon, ModalController, IonList, IonListHeader, IonItem, IonLabel,IonThumbnail } from '@ionic/angular/standalone';
 import {chevronBackOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
-import { ServiceFirebaseService } from 'src/app/core/services/firebase-service.service';
+import { ServiceFirebaseService } from 'src/app/core/services/services-firebase.service';
 import { Song } from 'src/app/core/interfaces/song';
 import { PlaySongsPage } from '../play-songs/play-songs.page';
 

@@ -1,8 +1,8 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { IonGrid,IonCol,IonRow, ModalController} from '@ionic/angular/standalone';
 import { PlaySongsPage } from 'src/app/modale/play-songs/play-songs.page';
-import { ServiceFirebaseService } from 'src/app/core/services/firebase-service.service';
 import { Song } from 'src/app/core/interfaces/song';
+import { ServiceFirebaseService } from 'src/app/core/services/services-firebase.service';
 @Component({
   selector: 'app-crid',
   templateUrl: './crid.component.html',
