@@ -5,14 +5,14 @@
       <p class="error"><ion-icon name="alert-outline"></ion-icon>{{ error}}</p>
     }
     <ion-label>Email</ion-label>
-    <ion-input type="Email" formControlName="email" name="email" placeholder="mike@mike.mike"></ion-input>
+    <ion-input type="Email" formControlName="email" name="email" placeholder="email@domain.com"></ion-input>
     @if (bioSection.get('email')?.invalid && (bioSection.get('email')?.dirty ||bioSection.get('email')?.touched)) {
     <div>
       @if(bioSection.get('email')?.errors?.['required'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Email require</p>
+      <p class="error"><ion-icon name="alert-outline"></ion-icon>L'adresse email est requise.</p>
       }
       @else if(bioSection.get('email')?.errors?.['pattern'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Format email invalid</p>
+      <p class="error"><ion-icon name="alert-outline"></ion-icon>L'adresse email n'est pas valide.</p>
       }
     </div>
     }
@@ -27,13 +27,13 @@
     ||bioSection.get('password')?.touched)) {
     <div>
       @if(bioSection.get('password')?.errors?.['required'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Password require</p>
+      <p class="error"><ion-icon name="alert-outline"></ion-icon>Le mot de passe est requis.</p>
       }
       @else if(bioSection.get('password')?.errors?.['pattern'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Format password invalid</p>
+      <p class="error"><ion-icon name="alert-outline"></ion-icon>Le mot de passe doit contenir au moins une lettre majuscule et un caractère spécial.</p>
       }
       @else if(bioSection.get('password')?.errors?.['minlength'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Size password invalid</p>
+      <p class="error"><ion-icon name="alert-outline"></ion-icon>Le mot de passe doit contenir au moins 8 caractères.</p>
       }
     </div>
     }
@@ -41,7 +41,9 @@
   <a type="submit" (click)="openModalpasswordForgot()" class="password-forgot">Mot de passe oublié</a>
   <ion-button class="button-green" [disabled]="submitForm || !bioSection.valid" type="submit">
     @if(submitForm){
-    <ion-spinner name="crescent"></ion-spinner>
+    <div class="spinner-position">
+      <ion-spinner name="crescent"></ion-spinner>
+    </div>
     }
     @else {
     <span>Se Connecter</span>

@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonRouterOutlet, IonGrid, IonRow, IonCol, IonLabel, IonIcon, IonInput, IonButton, IonSpinner} from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonRouterOutlet, IonGrid, IonRow, IonCol, IonLabel, IonIcon, IonInput, IonButton, IonSpinner, IonItem } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { chevronBackOutline, eyeOffOutline, eyeOutline } from 'ionicons/icons';
 import { ServiceFirebaseService } from 'src/app/core/services/services-firebase.service';
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './password-forget.page.html',
   styleUrls: ['./password-forget.page.scss'],
   standalone: true,
-  imports: [IonSpinner, IonButton, IonIcon, IonLabel, IonCol, IonRow, IonGrid, IonRouterOutlet, IonContent, IonHeader, IonTitle, IonToolbar, IonInput, CommonModule, FormsModule, ReactiveFormsModule]
+  imports: [IonItem, IonSpinner, IonButton, IonIcon, IonLabel, IonCol, IonRow, IonGrid, IonRouterOutlet, IonContent, IonHeader, IonTitle, IonToolbar, IonInput, CommonModule, FormsModule, ReactiveFormsModule]
 })
 export class PasswordForgetPage implements OnInit {
 
@@ -33,7 +33,7 @@ modal: any;
     ]),
   })
   togglePasswordVisibility() {
-    this.showPassword = !this.showPassword;  // Toggle the boolean value
+    this.showPassword = !this.showPassword;  
   }
   onSubmit() {
     if (this.bioSection.valid) {

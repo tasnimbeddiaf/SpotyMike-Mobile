@@ -47,10 +47,9 @@ export class LoginPage implements OnInit {
     if (this.bioSection.valid) {
         this.submitForm = true;
         setTimeout(async () => {
-        this.submitForm = false; // Cachez l'indicateur de chargement après le délai
+        this.submitForm = false; 
           const reponse = await this.firebaseService.getUsers(this.bioSection.value.email, this.bioSection.value.password);
           if(reponse.length>0){
-            //todo add localStorage....
             this.router.navigate(['home/home']);
           }else{
             this.error = "Email or password incorrect";
